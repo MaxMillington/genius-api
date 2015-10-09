@@ -4,9 +4,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
 
 <div>
   <% if current_user %>
@@ -30,13 +27,15 @@
 </p>
 <br>
 
+<h3>Texts:</h3>
 <% @texts.each do |text| %>
     <%= link_to text.name, text_path(text) %>
 <% end %>
 
 <br>
+<br>
 
-
+<h4>Add a text</h4>
 <div>
   <%= render partial: 'form' %>
 </div>

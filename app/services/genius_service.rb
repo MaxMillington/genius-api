@@ -8,7 +8,7 @@ class GeniusService
   end
 
   def search(term)
-    parse(connection.get('search', term))[:response][:hits]
+    parse(connection.get('search', {q: URI.escape(term)}))[:response][:hits]
   end
 
   private

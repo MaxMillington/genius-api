@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
 
   def search
     @search_results = GeniusService.new(current_user).
-        search(params[:term])
+        search(params[:q])
   end
 
 end

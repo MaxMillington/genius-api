@@ -1,0 +1,16 @@
+<br>
+<br>
+<br>
+<%= link_to "Homepage", root_path %>
+
+<h1>Search Results</h1>
+
+<div>
+  <% unless @search_results.empty? %>
+      <% @search_results.each do |result| %>
+          Artist: <%= result[:result][:primary_artist][:name] %><br>
+          Song Title: <%= result[:result][:title] %><br><br>
+      <% end %>
+      <br>
+  <% end %>
+</div>
