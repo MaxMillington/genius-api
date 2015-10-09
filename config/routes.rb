@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   get  'auth/genius/callback', to: 'sessions#create'
   get  '/logout', to: 'sessions#destroy'
 
+  get '/search', to: 'welcome#search'
+
+  resources :texts, only: [:create, :show, :index]
+
 end
